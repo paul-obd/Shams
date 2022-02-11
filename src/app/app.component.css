@@ -1,0 +1,140 @@
+.footer{
+    width: 100%;
+    min-height: 30vh;
+    background-color: #283d44;
+}
+
+.header{
+    
+    margin: 0 !important;
+  
+    margin-top: 0 ;
+    padding: 0%;
+    width: 100%;
+    min-height: 50vh;
+    background-image: url("../assets/header.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* padding-top: 75.28%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+
+    color: white;
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+   /* margin-top: -75.28%; */
+
+}
+.container h1{
+  font-family: Georgia, serif;
+}
+
+.header-img{
+    position: absolute;
+    z-index: 0;
+
+
+   
+}
+
+.logo{
+    width: 50%;
+    height: 100%;
+}
+
+.row{
+ 
+    display: flex;
+    justify-content: center;
+}
+
+.col{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.all-ring-section{
+    margin-top: 7%;
+    
+}
+.all-bracelets-section{
+    margin-top: 10%;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .container{
+      
+        display: flex;
+        
+        justify-content: center;
+       /* margin-top: -50.28%; */
+        
+    }
+ 
+}
+
+@media only screen and (max-width: 900px) {
+
+    .container{
+      
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+        justify-content: center;
+       /* margin-top: -50.28%; */
+        
+    }
+    .header{
+        min-height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+     
+    .container{
+      
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+        justify-content: center;
+       /* margin-top: -45.28%; */
+        
+    }
+    .header{
+        min-height: 100vh;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .wrapper{ 
+    position: relative;
+     overflow-x:hidden;
+    
+    
+ }
+ .header{
+    min-height: 100vh;
+}
+}
+  

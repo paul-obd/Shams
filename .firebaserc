@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "training-e6845": {
+      "hosting": {
+        "practice01": [
+          "training-e6845"
+        ]
+      }
+    }
+  }
+}
