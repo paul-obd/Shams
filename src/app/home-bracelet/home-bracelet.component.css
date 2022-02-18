@@ -123,11 +123,11 @@ color: #9d6c45 !important;
 
     }
 
-    .description h1{
+    .description h1{ 
         font-size: 3vh;
         line-height: 3vh;
-        
-    }
+         
+    } 
 
     .title h1{
         font-size: 6vh;

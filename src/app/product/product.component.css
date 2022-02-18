@@ -1,0 +1,41 @@
+.exampl-card img{
+   
+  object-fit: contain;
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    
+
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+}
+
+
+.name, .add-to-card-btn, .price{
+    object-fit: contain;
+    color: #283d44;
+    font-weight: bolder;
+
+}
+
+.add-to-card-btn{
+    margin-bottom: 2%;
+  
+}
+
+
+.mat-raised-button{
+    background-color: #283d44;
+    color: #fbfbfb;
+}

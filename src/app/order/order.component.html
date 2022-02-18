@@ -1,0 +1,22 @@
+<div class="contain">
+    <div class="product">
+        <img [src]="product.img" alt="">
+        <!-- <div class="product-info">
+            <h1>{{product.name}} :</h1>
+            <h1>{{product.price | currency}}</h1>
+        </div> -->
+
+    </div>
+
+    <div class="info">
+        <h1>{{product.name}}: x{{quantity}}</h1>
+        <h1>Total: {{product.price | currency}}x{{quantity}} = {{total | currency}}</h1>
+    </div>
+
+    <div class="remove">
+        <button mat-button (click)="remove()">Remove</button>
+
+    </div>
+
+</div>
+<mat-divider></mat-divider>

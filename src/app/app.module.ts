@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule} from '@angular/fire/database'; 
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
+import {CarouselModule} from 'primeng/carousel';
 
 import { environment } from 'src/environments/environment';
 
@@ -17,6 +18,15 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MaterialModule } from './material/material.module';
 import { HomeRingsComponent } from './home-rings/home-rings.component';
 import { HomeBraceletComponent } from './home-bracelet/home-bracelet.component';
+import { CartService } from './services/cart.service';
+import { FeaturedProductsComponent } from './featured-products/featured-products.component';
+import { HomeComponent } from './home/home.component';
+
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { OrderComponent } from './order/order.component';
+import { CartComponent } from './cart/cart.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +36,15 @@ import { HomeBraceletComponent } from './home-bracelet/home-bracelet.component';
     HeaderLogoPartComponent,
     ToolbarComponent,
     HomeRingsComponent,
-    HomeBraceletComponent
+    HomeBraceletComponent,
+    FeaturedProductsComponent,
+    HomeComponent,
+
+    ProductDetailsComponent,
+    OrderComponent,
+    CartComponent,
+    AboutUsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +52,14 @@ import { HomeBraceletComponent } from './home-bracelet/home-bracelet.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
-    MaterialModule
-    
+    MaterialModule,
+    CarouselModule
+
   ],
-  providers: [ProductsService],
+  providers: [
+    ProductsService,
+    CartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,171 @@
+.containe{
+    min-height: 100vh;
+
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    flex-direction: column;
+    align-items: center;
+
+}
+.roww{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.coll{
+    width: 40%;
+    min-height: auto;
+}
+
+
+.add, .remove{
+  cursor: pointer;
+}
+
+
+
+.action{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+    width: 100%;
+}
+
+.img{
+    width: 50%;
+    min-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+img{
+
+    width: 50%;
+    min-height: 80%;
+
+
+}
+
+
+.description{
+ 
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.order-info{
+    width: 100%;
+    min-height: 80%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.order-details{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.total-price{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.quantity{
+ 
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+::ng-deep .mat-button{
+    background-color: #283d44;
+    color: white;
+    width: 40%;
+
+}
+
+
+@media  screen  and (max-width: 768px) {
+    .img{
+        width: 100%;
+        min-height: 60%;
+ 
+    }
+    img{
+        width: 100%;
+        min-height: 60%;
+    
+    }
+
+    .roww{
+        flex-direction: column;
+    }
+
+    .coll{
+        width: 100%;
+    }
+
+    .containe{
+       
+        justify-content: start;
+        margin-top: 0%;
+        margin-bottom: 5%;
+ 
+    }
+
+
+    ::ng-deep .mat-button{
+        background-color: #283d44;
+        color: white;
+        width: 40%;
+    
+    }
+
+    
+    
+    .description{
+        width: 100%;
+        min-height: 100%;
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}

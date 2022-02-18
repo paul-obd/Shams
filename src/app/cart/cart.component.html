@@ -1,0 +1,28 @@
+<div class="contain">
+    <div class="empty" *ngIf="cartService.cart.length === 0"><h1>No items yet</h1></div>
+    <div class="orders">
+        <app-order *ngFor="let order of cartService.cart"
+        [nb]="order.nb"
+        [product] = "order.product"
+
+        [quantity] = "order.quantity"
+        [total] = "order.total"
+        ></app-order>
+
+    </div>
+</div>
+<div class="checkout">
+    <div class="total">
+        <h1>Total: {{cartService.total | currency}}</h1>
+    </div>
+    <div class="checkout-btn">
+        <button (click)="checkout()" mat-button *ngIf="cartService.total > 0">
+           Checkout({{cartService.cart.length}})
+        </button>
+        <button mat-button  *ngIf="cartService.total === 0" disabled>
+            Checkout({{cartService.cart.length}})
+         </button>
+    </div>
+
+</div>
+

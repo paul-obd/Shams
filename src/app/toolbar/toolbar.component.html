@@ -1,15 +1,20 @@
 <mat-toolbar>
-    <div class="burger" (click)="navSlide()">
+    <div class="burger" (click)="navSlide()" *ngIf="!cartService.noToolbar">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
     </div>
-    <nav class="toolbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Jewelry</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Contact us</a></li>
+    <nav class="toolbar-nav" *ngIf="!cartService.noToolbar" >
+        <li><a [routerLink]="[ '/home' ]" (click)="navSlide()">Home</a></li>
+        <li (click)="setMatTab()"><a [routerLink]="[ '/jewelries' ]" (click)="navSlide()">jewelries</a></li>
+        <li><a [routerLink]="[ '/about-us' ]" (click)="navSlide()">About us</a></li>
+        <li><a [routerLink]="[ '/contact-us' ]" (click)="navSlide()">Contact us</a></li>
     </nav>
+    <div class="in-cart"  >
+        <mat-icon *ngIf="cartService.noToolbar" (click)="stepBack()"  class="example-icon" aria-hidden="false" aria-label="Example user verified icon">arrow_back</mat-icon>
+        <h1  *ngIf="cartService.noToolbar && cartService.inCart ">Shopping Cart</h1>
+    </div>
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">shopping_cart</mat-icon>
+    <mat-icon *ngIf="cartService.cart.length > 0" (click)="goToCart()" [matBadge]="cartService.cart.length" matBadgeOverlap="true" matBadgeColor="warn" class="example-icon" aria-hidden="false" aria-label="Example user verified icon">shopping_cart</mat-icon>
+    <mat-icon *ngIf="cartService.cart.length === 0"  (click)="goToCart()" class="example-icon" aria-hidden="false" aria-label="Example user verified icon">shopping_cart</mat-icon>
 </mat-toolbar> 

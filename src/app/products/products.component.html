@@ -1,20 +1,30 @@
-<table>
-    <thead>
-      <th>Number</th>
-      <th>Created At</th>
-      <th>Expire At</th>
-      <th>Amount</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of productService.products">
-  
-        <td>{{product.id}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.price}}</td>
-      
-        <td>
-            <button mat-raised-button (click)="deleteProduct(product.id)">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<mat-tab-group mat-align-tabs="center" [(selectedIndex)]="productService.matTab">
+  <mat-tab label="Rings">
+    <div class="row p row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+      <app-product class="col"
+      *ngFor="let ring of productService.rings"
+      [id]="ring.id"
+      [category]="ring.category"
+       [name]="ring.name"
+       [img]="ring.img" 
+       [price]="ring.price | currency">
+      </app-product>
+    </div>
+
+  </mat-tab>
+
+  <mat-tab label="Bracelets">
+    <div class="row p row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+      <app-product class="col"
+      *ngFor="let bracelet of productService.bracelets"
+      [id]="bracelet.id"
+      [category]="bracelet.category"
+       [name]="bracelet.name"
+       [img]="bracelet.img" 
+       [price]="bracelet.price | currency">
+      </app-product>
+    </div>
+
+  </mat-tab>
+
+</mat-tab-group>

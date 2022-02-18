@@ -1,0 +1,55 @@
+.contain{
+    min-height: 100vh;
+}
+
+.empty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+
+.checkout{
+    width: 100% !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #283d44;
+  
+    position: fixed; 
+    bottom: 0px;
+ 
+     
+}
+
+.checkout h1{
+  font-size: 100%;
+  color: #fbfbfb;
+}
+
+.checkout button{
+    width: 80%;
+
+}
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+}
+
+.checkout-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.checkout-btn .mat-button{
+    background-color: #fbfbfb;
+    color: #283d44;
+
+}
+

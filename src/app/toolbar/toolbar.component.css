@@ -55,6 +55,18 @@
  
 }
 
+.in-cart{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    width: 40%;
+    
+}
+
+.in-cart h1{
+    margin-left: 5%;
+}
+
 @media screen and (max-width: 1024px){
     .toolbar-nav{
         width: 80%;

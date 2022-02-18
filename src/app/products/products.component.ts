@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product.model';
+import { CartService } from '../services/cart.service';
 import { ProductsService } from '../services/products.service';
 
 @Component({
@@ -9,11 +10,23 @@ import { ProductsService } from '../services/products.service';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor(public productService: ProductsService) { }
+  constructor(public productService: ProductsService, private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(data =>{
-      this.productService.products = data.map(p =>{
+   this.getBracelets()
+   this.getRings()
+  //  this.cartService.noToolbar = false
+  //  this.cartService.inCart = false
+
+  }
+
+  // getProducts(){
+  //   this.productService.getProducts()
+  // }
+
+  getBracelets(){
+    this.productService.getAllBracelets().subscribe(bracelets =>{
+      this.productService.bracelets = bracelets.map(p =>{
         const data: any = p.payload.doc.data()
         return {
           id: p.payload.doc['id'],
@@ -24,9 +37,18 @@ export class ProductsComponent implements OnInit {
     })
   }
 
-  // getProducts(){
-  //   this.productService.getProducts()
-  // }
+  getRings(){
+    this.productService.getAllRings().subscribe(rings =>{
+      this.productService.rings = rings.map(p =>{
+        const data: any = p.payload.doc.data()
+        return {
+          id: p.payload.doc['id'],
+          ...data
+
+        } as Product;
+      })
+    })
+  }
 
   addProduct(product: Product){
     this.productService.addProduct(product)

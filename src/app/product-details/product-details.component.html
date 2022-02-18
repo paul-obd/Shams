@@ -1,0 +1,45 @@
+<div class="containe">
+    <div class="roww">
+        <div class="img coll">
+            <img [src]="img" alt="">
+        </div>
+        <div class="description coll">
+            <div class="order-info">
+                <div class="info">
+                    <div class="name">
+                        <h1>{{name}}</h1>
+                    </div>
+
+                    <div class="price">
+                        <h3>{{price | currency}} </h3>
+                    </div>
+
+                </div>
+
+                <div class="order-details">
+                    <div class="quantity">
+                        <mat-icon class="add" aria-hidden="false" aria-label="Example home icon" (click)="add()">add</mat-icon>
+                        <!-- <input type="text" [(ngModel)]="quantity"> -->
+                        <h3>{{quantity}}</h3>
+                        <mat-icon class="remove" aria-hidden="false" aria-label="Example home icon" (click)="remove()">remove
+                        </mat-icon>
+                    </div>
+
+                    <div class="total-price">
+                        <h1>Total:</h1>
+                        <h3>{{total | currency}}</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action">
+                <button mat-button (click)="checkout()" >Checkout</button>
+                <button mat-button (click)="addToCart()">Add to Cart</button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CartService } from './services/cart.service';
 
 
 
@@ -8,8 +10,16 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'practice01';
+export class AppComponent implements OnInit{
+
+
+  title = 'SHAMS';
+
+  constructor(private route: Router, public cartService: CartService){}
+
+  ngOnInit(): void {
+    this.route.navigate(['/home'])
+  }
 
  
 }

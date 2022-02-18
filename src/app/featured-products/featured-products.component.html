@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="title" #title>
+        <h1>
+            Featured Products
+        </h1>
+    </div>
+    <div class="seperator" #seperator>
+        <div class="sep-line">
+            <div class="icon">
+                <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">
+                    light_mode</mat-icon>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="c-section" #carousel>
+    <p-carousel class="carousel" [autoplayInterval]="3000" [value]="productService.featuredProducts"
+        styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+
+            <app-product 
+            [id]="product.id"
+            [category]="product.category"
+            [name]="product.name" 
+            [img]="product.img" 
+            [price]="product.price | currency">
+
+            </app-product>
+        </ng-template>
+    </p-carousel>
+</div>
